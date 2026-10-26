@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from AWS - v1"
+    return "Hello from AWS - v2"
 
 @app.route("/health")
 def health():
@@ -11,4 +11,3 @@ def health():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-    
