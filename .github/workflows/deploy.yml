@@ -29,5 +29,5 @@ jobs:
           docker build -t $IMAGE:latest .
           docker push $IMAGE:latest
       - run: |
-          aws ecs update-service --cluster devops-cluster \
-            --service devops-service --force-new-deployment
+          aws ecs update-service --cluster devops-cluster-cfn \
+            --service devops-service-cfn --force-new-deployment
