@@ -21,3 +21,6 @@ def test_order_found():
 
 def test_order_missing():
     assert app.test_client().get("/orders/9999").status_code == 404    
+
+def test_home_page():
+    assert b"Order Tracking" in app.test_client().get("/").data
